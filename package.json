@@ -1,0 +1,39 @@
+{
+  "name": "caltopo-json",
+  "version": "0.0.0",
+  "description": "Get the underlying JSON from a CalTopo map.",
+  "author": "Scott Hardy",
+  "license": "MIT",
+  "repository": "git@github.com:scott113341/caltopo-json.git",
+  "homepage": "https://github.com/scott113341/caltopo-json",
+  "bugs": "https://github.com/scott113341/caltopo-json/issues",
+  "keywords": [],
+  "main": "lib/index.js",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "build": "shx rm -rf lib/ && shx mkdir lib/ && babel --copy-files --out-dir lib/ src/",
+    "lint": "semistandard --fix",
+    "test": "npm run build && node lib/test/index.js",
+    "test:ci": "node lib/test/index.js && semistandard"
+  },
+  "dependencies": {
+    "bluebird": "3.4.6"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-plugin-transform-async-to-generator": "^6.16.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "np": "^2.10.0",
+    "semistandard": "^9.1.0",
+    "shx": "^0.2.0",
+    "tape": "^4.6.2"
+  },
+  "semistandard": {
+    "ignore": [
+      "/lib/"
+    ]
+  }
+}
