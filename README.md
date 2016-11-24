@@ -12,7 +12,7 @@ Get the underlying JSON from a CalTopo map.
 
 ## usage example
 
-To get the CalTopo JSON for map [https://caltopo.com/m/F56K](https://caltopo.com/m/F56K):
+Get the JSON for CalTopo map [https://caltopo.com/m/F56K](https://caltopo.com/m/F56K)
 
 ```js
 // ES6
