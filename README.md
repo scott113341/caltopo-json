@@ -13,9 +13,51 @@ Get the underlying JSON from a CalTopo map.
 ## usage
 
 ```js
+// ES6
 import getJson from 'caltopo-json';
 
+getJson('F56K').then(json => console.log(json.Marker));
+  
+/*
+[
+  {
+    "comments": "commentz",
+    "id": 0,
+    "label": "Test Point",
+    "position": {
+      "id": 23773245,
+      "lat": 39.46486419970058,
+      "lng": -106.64050943389896
+    },
+    "updated": "1479945025000",
+    "url": "#FF0000"
+  }
+]
+*/
+```
 
+```js
+// ES5
+const getJson = require('caltopo-json').default;
+
+getJson('F56K').then(json => console.log(json.Marker));
+  
+/*
+[
+  {
+    "comments": "commentz",
+    "id": 0,
+    "label": "Test Point",
+    "position": {
+      "id": 23773245,
+      "lat": 39.46486419970058,
+      "lng": -106.64050943389896
+    },
+    "updated": "1479945025000",
+    "url": "#FF0000"
+  }
+]
+*/
 ```
 
 
