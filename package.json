@@ -13,7 +13,7 @@
     "lib/"
   ],
   "scripts": {
-    "build": "shx rm -rf lib/ && shx mkdir lib/ && babel --copy-files --out-dir lib/ src/",
+    "build": "shx rm -rf lib/ && shx mkdir lib/ && babel --copy-files --source-maps --out-dir lib/ src/",
     "lint": "semistandard --fix",
     "test": "npm run build && node lib/test/index.js",
     "test:ci": "node lib/test/index.js && semistandard"
@@ -29,6 +29,7 @@
     "np": "^2.10.0",
     "semistandard": "^9.1.0",
     "shx": "^0.2.0",
+    "source-map-support": "^0.4.6",
     "tape": "^4.6.2"
   },
   "semistandard": {
