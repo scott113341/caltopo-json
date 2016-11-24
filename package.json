@@ -10,7 +10,8 @@
   "keywords": [],
   "main": "lib/index.js",
   "files": [
-    "lib/"
+    "lib/",
+    "src/"
   ],
   "scripts": {
     "build": "shx rm -rf lib/ && shx mkdir lib/ && babel --copy-files --source-maps --out-dir lib/ src/",
