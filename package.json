@@ -1,6 +1,6 @@
 {
   "name": "caltopo-json",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Get the underlying JSON from a CalTopo map.",
   "author": "Scott Hardy",
   "license": "MIT",
