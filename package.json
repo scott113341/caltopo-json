@@ -19,7 +19,7 @@
     "test:ci": "node lib/test/index.js && semistandard"
   },
   "dependencies": {
-    "bluebird": "3.4.6"
+    "superagent": "3.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",

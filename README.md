@@ -10,6 +10,14 @@ Get the underlying JSON from a CalTopo map.
 
 `npm install caltopo-json`
 
+## usage
+
+```js
+import getJson from 'caltopo-json';
+
+
+```
+
 
 [npm-version-badge]: https://img.shields.io/npm/v/caltopo-json.svg?style=flat-square
 [npm-version-href]: https://www.npmjs.com/package/caltopo-json

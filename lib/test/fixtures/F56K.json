@@ -1,0 +1,38 @@
+{
+  "timestamp": "1479945042807",
+  "Shape": [],
+  "Folder": [],
+  "CustomLayer": [],
+  "LocatorGroup": [],
+  "Locator": [],
+  "MapConfig": {
+    "base": "f",
+    "layers": [
+      "r2",
+      "usi"
+    ],
+    "opacity": [
+      0.25,
+      0.4
+    ],
+    "alphas": [
+      "sf"
+    ]
+  },
+  "ConfiguredLayer": [],
+  "GeoRef": [],
+  "Marker": [
+    {
+      "comments": "commentz",
+      "id": 0,
+      "label": "Test Point",
+      "position": {
+        "id": 23773245,
+        "lat": 39.46486419970058,
+        "lng": -106.64050943389896
+      },
+      "updated": "1479945025000",
+      "url": "#FF0000"
+    }
+  ]
+}
