@@ -10,7 +10,9 @@ Get the underlying JSON from a CalTopo map.
 
 `npm install caltopo-json`
 
-## usage
+## usage example
+
+To get the CalTopo JSON for map [https://caltopo.com/m/F56K](https://caltopo.com/m/F56K):
 
 ```js
 // ES6
