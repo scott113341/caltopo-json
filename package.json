@@ -7,7 +7,10 @@
   "repository": "git@github.com:scott113341/caltopo-json.git",
   "homepage": "https://github.com/scott113341/caltopo-json",
   "bugs": "https://github.com/scott113341/caltopo-json/issues",
-  "keywords": [],
+  "keywords": [
+    "caltopo",
+    "json"
+  ],
   "main": "lib/index.js",
   "files": [
     "lib/",
