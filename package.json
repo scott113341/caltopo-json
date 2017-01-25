@@ -23,7 +23,7 @@
     "test:ci": "node lib/test/index.js && semistandard"
   },
   "dependencies": {
-    "superagent": "3.2.1"
+    "superagent": "3.4.0"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
