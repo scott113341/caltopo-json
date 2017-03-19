@@ -1,0 +1,1510 @@
+{
+  "https": true,
+  "garmin_devicekey": "3816da93127c2457f810a89aa50cbd42",
+  "pdf_scales": "12000,24000,25000,50000,62500,63360",
+  "settings": {
+    "browser": "{\"datanavstate\":true,\"datanavoffset\":220,\"maplabel\":\"backlit\",\"utmgrid\":{\"major\":0.8,\"show\":false},\"autodraw\":\"usfs\",\"vertices\":10000}",
+    "map": "{\"config\":{\"base\":\"f\",\"layers\":[\"r2\",\"usi\"],\"opacity\":[0.25,0.4],\"alphas\":[\"sf\"]},\"center\":{\"lat\":39.46486419970058,\"lng\":-106.64050943389896},\"zoom\":15}"
+  },
+  "garmin_hostname": "http://caltopo.com",
+  "permission": "ADMIN",
+  "imgprefix": "http://s3-us-west-1.amazonaws.com/caltopo/static/images",
+  "view_altitudes": "25 ft=6;50 ft=15;100 ft=30;250 ft=76;1000 ft=304;2500 ft=762;10000 ft=3048;25000 ft=7620;60000 ft=18288;120000 ft=36576",
+  "refresh_interval": 20000,
+  "version": "CalTopo",
+  "tenant": {
+    "cfgUpdated": 1479945016018,
+    "comments": "",
+    "description": "caltopo-json-test",
+    "name": "F56K",
+    "publicName": "caltopo-json-test",
+    "sharing": "PUBLIC"
+  },
+  "subscription": true,
+  "callsign_enabled": false,
+  "features": {
+    "mapBuilder": true,
+    "maxDEMPoints": 10000,
+    "maxKMZImages": 200,
+    "maxPDFExpiration": 1000,
+    "maxPDFPages": 40,
+    "maxPDFSize": 200,
+    "maxPrivateMaps": 200,
+    "name": "pro",
+    "staticContent": true,
+    "superOverlay": true,
+    "wms": true
+  },
+  "map": {
+    "layers_grouping": "Topographic Maps=t,f,f16a,mbt,mba,eus,m;Canada=nrc,cm;Google Layers=ter,map,sat,hyb;Shaded Relief=r,r2,r3;Aerial Imagery=n,usi,mli;Overview Maps=faa,v,nps,usfs,12;Street Maps=oc,om,oo;Historic Maps=1900,1930",
+    "layers": [
+      {
+        "alias": "mbt",
+        "alphaOverlay": false,
+        "copyright": "CalTopo,<a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap contributors<\/a>",
+        "maxresolution": 18,
+        "minresolution": 5,
+        "name": "MapBuilder Topo",
+        "opacity": 0,
+        "template": "/resource/imagery/mapbuilder/cs-60-40-c21BB6100-h22-a21-r22-t22d-m21-p21/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "t",
+        "alphaOverlay": false,
+        "copyright": "CalTopo,USGS,NZTopo CC-by-3.0-NZ",
+        "description": "USGS 7.5' quads assembled from Cal-Atlas scans and USGS GeoPDFs.",
+        "maxresolution": 16,
+        "minresolution": 5,
+        "name": "USGS 7.5' Topos",
+        "opacity": 0,
+        "template": "http://caltopo.s3.amazonaws.com/topo/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "f",
+        "alphaOverlay": false,
+        "copyright": "CalTopo,USFS",
+        "description": "Forest Service road and trail layer assembled from FSTopo PDFs.",
+        "maxresolution": 16,
+        "minresolution": 5,
+        "name": "US Forest Service",
+        "opacity": 0,
+        "template": "http://ctusfs.s3.amazonaws.com/fstopo/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "f16a",
+        "alphaOverlay": false,
+        "copyright": "CalTopo,USFS",
+        "description": "Forest Service road and trail layer assembled from FSTopo PDFs.",
+        "maxresolution": 16,
+        "minresolution": 5,
+        "name": "USFS 2016",
+        "opacity": 0,
+        "template": "http://ctusfs.s3.amazonaws.com/2016a/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "nrc",
+        "alphaOverlay": false,
+        "copyright": "NRCan",
+        "description": "Vector-drawn topo layer hosted by Natural Resources Canada.",
+        "maxresolution": 16,
+        "minresolution": 5,
+        "name": "NR Canada",
+        "opacity": 0,
+        "template": "http://wms.sst-sw.rncan.gc.ca/wms/toporama_en?VERSION=1.1.1&REQUEST=GetMap&LAYERS=WMS-Toporama&STYLES=&SRS=EPSG:4326&BBOX={left},{bottom},{right},{top}&WIDTH={tilesize}&HEIGHT={tilesize}&FORMAT=image/png&BGCOLOR=0xCCCCCC&EXCEPTIONS=INIMAGE",
+        "type": "WMS"
+      },
+      {
+        "alias": "map",
+        "alphaOverlay": false,
+        "maxresolution": 0,
+        "minresolution": 0,
+        "name": "Map",
+        "opacity": 0,
+        "template": "google.maps.MapTypeId.ROADMAP",
+        "type": "NATIVE"
+      },
+      {
+        "alias": "ter",
+        "alphaOverlay": false,
+        "maxresolution": 0,
+        "minresolution": 0,
+        "name": "Terrain",
+        "opacity": 0,
+        "template": "google.maps.MapTypeId.TERRAIN",
+        "type": "NATIVE"
+      },
+      {
+        "alias": "sat",
+        "alphaOverlay": false,
+        "maxresolution": 0,
+        "minresolution": 0,
+        "name": "Satellite",
+        "opacity": 0,
+        "template": "google.maps.MapTypeId.SATELLITE",
+        "type": "NATIVE"
+      },
+      {
+        "alias": "r",
+        "alphaOverlay": false,
+        "copyright": "CalTopo",
+        "description": "Relief shading based on the National Elevation Dataset with added vertical exaggeration.",
+        "maxresolution": 16,
+        "minresolution": 5,
+        "name": "Normal",
+        "opacity": 0,
+        "template": "http://ctrelief.s3.amazonaws.com/relief/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "r2",
+        "alphaOverlay": false,
+        "copyright": "CalTopo",
+        "maxresolution": 21,
+        "minresolution": 5,
+        "name": "Enhanced",
+        "opacity": 0,
+        "template": "http://ctrelief.s3.amazonaws.com/relief/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "r3",
+        "alphaOverlay": false,
+        "copyright": "CalTopo",
+        "maxresolution": 21,
+        "minresolution": 5,
+        "name": "Terrain",
+        "opacity": 0,
+        "template": "http://ctrelief.s3.amazonaws.com/relief/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "rb",
+        "alphaOverlay": false,
+        "copyright": "CalTopo",
+        "maxresolution": 21,
+        "minresolution": 5,
+        "name": "Enhanced Relief",
+        "opacity": 0,
+        "template": "http://ctrelief.s3.amazonaws.com/relief/{V}/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "faa",
+        "alphaOverlay": false,
+        "maxresolution": 12,
+        "minresolution": 5,
+        "name": "FAA Sectional",
+        "opacity": 0,
+        "template": "http://wms.chartbundle.com/tms/v1.0/sec/{Z}/{X}/{Y}.png",
+        "type": "TMS"
+      },
+      {
+        "alias": "v",
+        "alphaOverlay": false,
+        "copyright": "CalTopo",
+        "description": "Hand-georeferenced visitor maps.  Select coverage in the western US only.",
+        "maxresolution": 14,
+        "minresolution": 5,
+        "name": "CA Visitor Maps",
+        "opacity": 0,
+        "template": "http://ctfun.s3.amazonaws.com/visitor/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "nps",
+        "alphaOverlay": false,
+        "copyright": "CalTopo,NPS",
+        "description": "Visitor maps for some national parks.",
+        "maxresolution": 14,
+        "minresolution": 5,
+        "name": "NPS Visitor Maps",
+        "opacity": 0,
+        "template": "http://ctvisitor.s3.amazonaws.com/nps/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "usfs",
+        "alphaOverlay": false,
+        "copyright": "CalTopo,USFS",
+        "description": "Visitor maps for some national forests.",
+        "maxresolution": 14,
+        "minresolution": 5,
+        "name": "USFS Visitor Maps",
+        "opacity": 0,
+        "template": "http://ctvisitor.s3.amazonaws.com/usfs/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "12",
+        "alphaOverlay": false,
+        "copyright": "CalTopo,USGS",
+        "description": "USGS 1deg by 2deg topo maps.",
+        "maxresolution": 12,
+        "minresolution": 5,
+        "name": "USGS 1:250k",
+        "opacity": 0,
+        "template": "http://caltopo.s3.amazonaws.com/1x2/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "usi",
+        "alphaOverlay": false,
+        "copyright": "CalTopo,USGS,USDA Farm Service Agency",
+        "description": "Aerial imagery from the USGS' US Topo multilayer PDFs.  Partial coverage for several western states.",
+        "maxresolution": 16,
+        "minresolution": 5,
+        "name": "USTopo Imagery",
+        "opacity": 0,
+        "template": "http://ustopo.s3.amazonaws.com/orthoimage/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "1900",
+        "alphaOverlay": false,
+        "copyright": "CalTopo,USGS",
+        "description": "Scanned historical maps dating from 1885-1915.",
+        "info": "Maps from 1885 to 1915",
+        "maxresolution": 14,
+        "minresolution": 5,
+        "name": "1885-1915",
+        "opacity": 0,
+        "template": "http://ctfun.s3.amazonaws.com/1900/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "1930",
+        "alphaOverlay": false,
+        "copyright": "CalTopo,USGS",
+        "description": "Scanned historical maps dating from 1915-1945.  Maps may contain survey data from prior to 1915.",
+        "info": "Maps from 1915 to 1945",
+        "maxresolution": 14,
+        "minresolution": 6,
+        "name": "1915-1945",
+        "opacity": 0,
+        "template": "http://ctfun.s3.amazonaws.com/1930/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "hyb",
+        "alphaOverlay": false,
+        "maxresolution": 0,
+        "minresolution": 0,
+        "name": "Hybrid",
+        "opacity": 0,
+        "template": "google.maps.MapTypeId.HYBRID",
+        "type": "NATIVE"
+      },
+      {
+        "alias": "cm",
+        "alphaOverlay": false,
+        "copyright": "NRCan",
+        "description": "Scanned 1:50k Canadian topos.",
+        "maxresolution": 15,
+        "minresolution": 5,
+        "name": "CanMatrix",
+        "opacity": 0,
+        "template": "http://nrcan.s3.amazonaws.com/canmatrix/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "n",
+        "alphaOverlay": false,
+        "copyright": "CalTopo,USDA Farm Service Agency",
+        "description": "California-specific 1m aerial imagery from the USDA.",
+        "info": "Imagery from 2009",
+        "maxresolution": 17,
+        "minresolution": 6,
+        "name": "NAIP",
+        "opacity": 0,
+        "template": "/resource/imagery/naip/rgb/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "eus",
+        "alphaOverlay": false,
+        "copyright": "ESRI",
+        "description": "ESRI's scanned topo layer.  Low-res but covers Alaska.",
+        "maxresolution": 15,
+        "minresolution": 5,
+        "name": "ArcGIS Topo",
+        "opacity": 0,
+        "template": "http://services.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer/tile/{Z}/{Y}/{X}",
+        "type": "TILE"
+      },
+      {
+        "alias": "m",
+        "alphaOverlay": false,
+        "copyright": "NOAA",
+        "maxresolution": 16,
+        "minresolution": 6,
+        "name": "Marine Charts",
+        "opacity": 0,
+        "template": "http://gis.charttools.noaa.gov/arcgis/rest/services/RNC/NOAA_RNC/ImageServer/exportImage?f=image&bbox={left},{bottom},{right},{top}&imageSR=102100&bboxSR=102100&size={tilesize},{tilesize}",
+        "type": "WMS"
+      },
+      {
+        "alias": "oc",
+        "alphaOverlay": false,
+        "copyright": "<a href=\"http://www.thunderforest.com/\">Thunderforest<\/a>,<a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap contributors<\/a>",
+        "description": "OpenStreetMap data plus trails and contour lines.",
+        "maxresolution": 17,
+        "minresolution": 0,
+        "name": "OpenCycleMap",
+        "opacity": 0,
+        "template": "http://tile.thunderforest.com/cycle/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "om",
+        "alphaOverlay": false,
+        "copyright": "<a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap contributors<\/a>",
+        "description": "OpenStreetMap",
+        "maxresolution": 17,
+        "minresolution": 0,
+        "name": "OpenStreetMap",
+        "opacity": 0,
+        "template": "http://a.tile.openstreetmap.org/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "oo",
+        "alphaOverlay": false,
+        "copyright": "<a href=\"http://www.thunderforest.com/\">Thunderforest<\/a>,<a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap contributors<\/a>",
+        "description": "OpenStreetMap data plus trails and contour lines.",
+        "maxresolution": 17,
+        "minresolution": 0,
+        "name": "TF Outdoors",
+        "opacity": 0,
+        "template": "http://tile.thunderforest.com/outdoors/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "mli",
+        "alphaOverlay": false,
+        "copyright": "NASA",
+        "maxresolution": 9,
+        "minresolution": 2,
+        "name": "Latest MODIS",
+        "opacity": 0,
+        "template": "/resource/imagery/modis-latest-imagery/{Z}/{X}/{Y}.jpg",
+        "type": "TILE"
+      },
+      {
+        "alias": "c",
+        "alphaOverlay": true,
+        "copyright": "CalTopo",
+        "description": "40 Foot Contours",
+        "maxresolution": 16,
+        "minresolution": 10,
+        "name": "40' Contours",
+        "opacity": 100,
+        "template": "http://ctcontour.s3.amazonaws.com/feet/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "mba",
+        "alphaOverlay": true,
+        "copyright": "CalTopo,<a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap contributors<\/a>",
+        "maxresolution": 18,
+        "minresolution": 5,
+        "name": "MapBuilder Overlay",
+        "opacity": 100,
+        "template": "/resource/imagery/mapbuilder/clear-0-0-h22t-r23-t23/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "sf",
+        "alphaOverlay": true,
+        "copyright": "CalTopo",
+        "description": "Slope shading by angle.  May be useful for travel planning in avalanche terrain when coupled with a healthy dose of skepticism.",
+        "info": "<div style='display: inline-block; color: rgb(245,255,10); background-color: #CCCCCC; margin-left: 5px'>27&deg;-29&deg;<\/div><div style='display: inline-block; color: rgb(250,183,0); margin-left: 5px'>30&deg;-31&deg;<\/div><div style='display: inline-block; color: rgb(254,121,0); margin-left: 5px'>32&deg;-34&deg;<\/div><div style='display: inline-block; color: rgb(255,0,0); margin-left: 5px'>35&deg;-45&deg;<\/div><div style='display: inline-block; color: rgb(135,0,225); margin-left: 5px'>46&deg;-50&deg;<\/div><div style='display: inline-block; color: rgb(0,0,255); margin-left: 5px'>51&deg;-59&deg;<\/div><div style='display: inline-block; color: rgb(0,0,0); margin-left: 5px'>60&deg;+<\/div>",
+        "maxresolution": 14,
+        "minresolution": 5,
+        "name": "Fixed Slope Shading",
+        "opacity": 30,
+        "template": "http://ctslope.s3.amazonaws.com/relief/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "sg",
+        "alphaOverlay": true,
+        "copyright": "CalTopo",
+        "description": "Slope gradient by angle.",
+        "info": "<span style='color: rgb(0,255,9); margin-left: 5px'>20&deg;<\/span><span style='color: rgb(245,255,10); background-color: #CCCCCC; margin-left: 5px'>28&deg;<\/span><span style='color: rgb(255,0,0); margin-left: 5px'>40&deg;<\/span><span style='color: rgb(0,0,255); margin-left: 5px'>55&deg;<\/span><span style='color: rgb(0,0,0); margin-left: 5px'>60&deg;<\/span>",
+        "maxresolution": 14,
+        "minresolution": 5,
+        "name": "Gradient Slope Shading",
+        "opacity": 30,
+        "template": "http://ctslope.s3.amazonaws.com/gradient/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "sma",
+        "alphaOverlay": true,
+        "copyright": "CalTopo,DOI,BLM",
+        "info": "<div style='display: inline-block; color: #00CC00; margin-left: 5px'>USFS<\/div><div style='display: inline-block; color: #888888; margin-left: 5px'>NPS<\/div><div style='display: inline-block; color: #FE7900; margin-left: 5px'>BLM/BOR<\/div><div style='display: inline-block; color: #FAB700; margin-left: 5px'>FWS<\/div><div style='display: inline-block; color: #CC0000; margin-left: 5px'>Local<\/div><div style='display: inline-block; color: #0000CC; margin-left: 5px'>State<\/div><div style='display: inline-block; color: #F0F000; background-color: #CCCCCC; margin-left: 5px'>Tribal<\/div><div style='display: inline-block; color: #000000; margin-left: 5px'>DOD/DOE<\/div>",
+        "maxresolution": 16,
+        "minresolution": 6,
+        "name": "Land Management",
+        "opacity": 100,
+        "template": "http://caltopo.com:8000/sma/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "fire",
+        "alphaOverlay": true,
+        "info": "<span style='color: #F0F000; margin-left: 5px; background-color: #CCCCCC'>2000-03<\/span><span style='color: #FAB700; margin-left: 5px'>04-07<\/span><span style='color: #FE7900; margin-left: 5px'>08-11<\/span><span style='color: #CC0000; margin-left: 5px'>12-2015<\/span>",
+        "maxresolution": 16,
+        "minresolution": 6,
+        "name": "Fire History",
+        "opacity": 100,
+        "template": "http://caltopo.com:8000/fire/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "modis",
+        "alphaOverlay": true,
+        "copyright": "CalTopo,RSAC",
+        "info": "<span style='color: #FF0000'>0-12h<\/span><span style='color: #FFAA00; margin-left: 5px'>12-24h<\/span><span style='color: #FFFF00; background-color: #CCCCCC; margin-left: 5px'>24-48h<\/span><span style='margin-left: 5px'><img style='vertical-align: middle' src='/resource/imagery/svg.png?path=M2%202L10%2010M10%202L2%2010M6%200L6%2012M0%206L12%206&color=000000&weight=1'/>hot<\/span><span style='margin-left: 5px'><img style='vertical-align: middle' src='/resource/imagery/svg.png?path=M0%200M12%2012M2%202L10%2010M10%202L2%2010&color=000000&weight=1'/>cool<\/span><span style='margin-left: 5px'><img style='vertical-align: middle' src='/resource/imagery/svg.png?path=M0%200L12%2012M6%200L12%205M0%206L6%2012&color=000000&weight=1'>recent smoke<\/img><\/span><span style='margin-left: 5px'/><img style='vertical-align: middle' src='/resource/imagery/svg.png?path=M0%200L12%200M0%200L0%2012M12%2012L12%200M12%2012L0%2012&color=000000&weight=1'/>older smoke<\/span>",
+        "maxresolution": 18,
+        "minresolution": 5,
+        "name": "Current Fire Activity",
+        "opacity": 100,
+        "template": "/resource/imagery/fire/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "sntl",
+        "alphaOverlay": true,
+        "maxresolution": 21,
+        "minresolution": 5,
+        "name": "SnoTel Sites",
+        "opacity": 100,
+        "template": "org.sarsoft.SnotelOverlay",
+        "type": "DATA"
+      },
+      {
+        "alias": "water",
+        "alphaOverlay": true,
+        "maxresolution": 21,
+        "minresolution": 5,
+        "name": "Water Gauges",
+        "opacity": 100,
+        "template": "org.sarsoft.WaterOverlay",
+        "type": "DATA"
+      },
+      {
+        "alias": "wx",
+        "alphaOverlay": true,
+        "maxresolution": 21,
+        "minresolution": 5,
+        "name": "Weather Stations",
+        "opacity": 100,
+        "template": "org.sarsoft.WeatherOverlay",
+        "type": "DATA"
+      },
+      {
+        "alias": "sc",
+        "alphaOverlay": true,
+        "maxresolution": 14,
+        "minresolution": 5,
+        "name": "DEM Shading",
+        "opacity": 30,
+        "template": "/resource/imagery/shading/{V}/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "scb",
+        "alphaOverlay": false,
+        "maxresolution": 14,
+        "minresolution": 5,
+        "name": "DEM Shading",
+        "opacity": 0,
+        "template": "/resource/imagery/shading/{V}/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "vs",
+        "alphaOverlay": true,
+        "maxresolution": 14,
+        "minresolution": 5,
+        "name": "Viewshed Analysis",
+        "opacity": 30,
+        "template": "/resource/imagery/viewshed/{V}/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "sl",
+        "alphaOverlay": true,
+        "maxresolution": 14,
+        "minresolution": 5,
+        "name": "Sunlight",
+        "opacity": 30,
+        "template": "/resource/imagery/sunlight/{V}/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "mb",
+        "alphaOverlay": false,
+        "copyright": "CalTopo,<a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap contributors<\/a>",
+        "maxresolution": 18,
+        "minresolution": 5,
+        "name": "MapBuilder",
+        "opacity": 0,
+        "template": "/resource/imagery/mapbuilder/{V}/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "mbo",
+        "alphaOverlay": true,
+        "copyright": "CalTopo,<a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap contributors<\/a>",
+        "maxresolution": 18,
+        "minresolution": 5,
+        "name": "MapBuilder",
+        "opacity": 100,
+        "template": "/resource/imagery/mapbuilder/{V}/{Z}/{X}/{Y}.png",
+        "type": "TILE"
+      },
+      {
+        "alias": "cl",
+        "alphaOverlay": false,
+        "maxresolution": 18,
+        "minresolution": 5,
+        "name": "Custom",
+        "opacity": 0,
+        "template": "/resource/imagery/external/{Z}/{X}/{Y}.png?config={V}",
+        "type": "TILE"
+      },
+      {
+        "alias": "clo",
+        "alphaOverlay": true,
+        "maxresolution": 18,
+        "minresolution": 5,
+        "name": "Custom Overlay",
+        "opacity": 100,
+        "template": "/resource/imagery/external/{Z}/{X}/{Y}.png?config={V}",
+        "type": "TILE"
+      },
+      {
+        "alias": "gr",
+        "alphaOverlay": false,
+        "maxresolution": 21,
+        "minresolution": 5,
+        "name": "Geospatial Image",
+        "opacity": 0,
+        "template": "/resource/imagery/georef/{Z}/{X}/{Y}.png?cfg={V}",
+        "type": "TILE"
+      },
+      {
+        "alias": "mai",
+        "alphaOverlay": false,
+        "copyright": "NASA",
+        "maxresolution": 9,
+        "minresolution": 2,
+        "name": "MODIS Archive Imagery",
+        "opacity": 0,
+        "template": "/resource/imagery/modis-archive-imagery/{V}/{Z}/{X}/{Y}.jpg",
+        "type": "TILE"
+      },
+      {
+        "alias": "my",
+        "alphaOverlay": true,
+        "maxresolution": 21,
+        "minresolution": 5,
+        "name": "Your Maps",
+        "opacity": 100,
+        "template": "org.sarsoft.MyMapsOverlay",
+        "type": "DATA"
+      },
+      {
+        "alias": "shared",
+        "alphaOverlay": true,
+        "maxresolution": 21,
+        "minresolution": 5,
+        "name": "Shared Maps",
+        "opacity": 100,
+        "template": "org.sarsoft.SharedMapsOverlay",
+        "type": "DATA"
+      }
+    ],
+    "layers_sample": "MapBuilder Topo:b=mbt;7.5' Topo Maps:b=t&n=0.25&o=r;Forest Service:b=t&n=1,0.25&o=f,r;Aerial Topo Hybrid:b=t&n=0.5&o=sat;Hybrid Satellite:b=sat&n=0.3&o=r&a=c,mba;Slope Angle Shading:b=t&n=1,0.25&o=f,r&a=sf",
+    "icons": {
+      "nps-dirtbike": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-dirtbike",
+        "offset": 17,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-anchor": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-anchor",
+        "offset": 30,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-water": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-water",
+        "offset": 35,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-rockfall": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-rockfall",
+        "offset": 31,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "harbor": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "harbor",
+        "offset": 65,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "motorbike": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "motorbike",
+        "offset": 47,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-camera": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-camera",
+        "offset": 20,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-caving": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-caving",
+        "offset": 13,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "rescue": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "rescue",
+        "offset": 61,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-ski": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-ski",
+        "offset": 8,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "mountainbike": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "mountainbike",
+        "offset": 45,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "shelter": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "shelter",
+        "offset": 67,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-phone": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-phone",
+        "offset": 25,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "tent": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "tent",
+        "offset": 62,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "xc": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "xc",
+        "offset": 37,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-4wd": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-4wd",
+        "offset": 18,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "plus": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "plus",
+        "offset": 60,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "snowshoe": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "snowshoe",
+        "offset": 39,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-shower": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-shower",
+        "offset": 29,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-roadbike": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-roadbike",
+        "offset": 16,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "snowmobile": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "snowmobile",
+        "offset": 49,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "binoculars": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "binoculars",
+        "offset": 57,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-scramble": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-scramble",
+        "offset": 12,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-skate": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-skate",
+        "offset": 10,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "arr-ne": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "arr-ne",
+        "offset": 4,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "antenna": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "antenna",
+        "offset": 55,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-parking": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-parking",
+        "offset": 21,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-xc": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-xc",
+        "offset": 9,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "arr-se": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "arr-se",
+        "offset": 6,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-picnic": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-picnic",
+        "offset": 34,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-info": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-info",
+        "offset": 24,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "climbing": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "climbing",
+        "offset": 40,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "flag": {
+        "anchor": [
+          0.2,
+          1
+        ],
+        "name": "flag",
+        "offset": 59,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "cp": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "cp",
+        "offset": 51,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "arr-w": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "arr-w",
+        "offset": 1,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "arr-e": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "arr-e",
+        "offset": 5,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-canoe": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-canoe",
+        "offset": 15,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "hunting": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "hunting",
+        "offset": 44,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "arr-s": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "arr-s",
+        "offset": 7,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-gas": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-gas",
+        "offset": 26,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "arr-n": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "arr-n",
+        "offset": 3,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-slip": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-slip",
+        "offset": 32,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "arr-nw": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "arr-nw",
+        "offset": 2,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "picnic": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "picnic",
+        "offset": 68,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "car": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "car",
+        "offset": 48,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "skiing": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "skiing",
+        "offset": 36,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "walking": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "walking",
+        "offset": 38,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-shelter": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-shelter",
+        "offset": 33,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "arr-sw": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "arr-sw",
+        "offset": 0,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "waterfall": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "waterfall",
+        "offset": 63,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-lighthouse": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-lighthouse",
+        "offset": 23,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "circle": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "circle",
+        "offset": 71,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "windsurf": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "windsurf",
+        "offset": 42,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "bike": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "bike",
+        "offset": 46,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "crossbones": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "crossbones",
+        "offset": 54,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "wetland": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "wetland",
+        "offset": 64,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "snorkel": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "snorkel",
+        "offset": 43,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "spelunking": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "spelunking",
+        "offset": 41,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "rocks": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "rocks",
+        "offset": 66,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-fire": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-fire",
+        "offset": 28,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-climbing": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-climbing",
+        "offset": 11,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-lookout": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-lookout",
+        "offset": 22,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "avy1": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "avy1",
+        "offset": 56,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "camera": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "camera",
+        "offset": 50,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "fire": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "fire",
+        "offset": 58,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-snowmobile": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-snowmobile",
+        "offset": 19,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-diving": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-diving",
+        "offset": 14,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "nps-firstaid": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "nps-firstaid",
+        "offset": 27,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "target": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "target",
+        "offset": 70,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "clue": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "clue",
+        "offset": 52,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "drinkingwater": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "drinkingwater",
+        "offset": 69,
+        "size": [
+          20,
+          20
+        ]
+      },
+      "warning": {
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "name": "warning",
+        "offset": 53,
+        "size": [
+          20,
+          20
+        ]
+      }
+    },
+    "datum": "WGS84",
+    "default_zoom": 5,
+    "coordinates": [
+      "DD",
+      "UTM"
+    ],
+    "default_lng": -98.4,
+    "default_lat": 38.8
+  },
+  "account": {
+    "alias": "scott113341",
+    "allowMessages": true,
+    "apiKey": "3ND3HR",
+    "email": "scott.the.hardy@gmail.com",
+    "handle": "scott113341",
+    "layers": [],
+    "logins": [],
+    "subscriptionExpires": 1503877138000,
+    "subscriptionRenew": true,
+    "subscriptionStatus": "active",
+    "subscriptionType": "pro",
+    "subscriptionValid": true
+  },
+  "server": "http://caltopo.com/",
+  "pdf_sizes": "8.5x11,8.27x11.69,8.5x14,11x17,11.69x16.53,13x19,18x24,24x36,36x48",
+  "location_enabled": true,
+  "view_layers": "Imagery=usi;Topo=t;WireImagery=,usi;WireTopo=,t;NAIP Aerial (CA)=n",
+  "hosted": true,
+  "px_limit": 16777216
+}

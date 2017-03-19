@@ -1,20 +1,40 @@
-import request from 'superagent';
+const request = require('superagent');
 
-export default getJson;
+async function getJson (mapId) {
+  const html = await fetchHtml(mapId);
+  return {
+    metaData: parseMetaData(html),
+    mapData: parseMapData(html)
+  };
+}
 
-export async function getJson (mapId) {
-  const url = `https://caltopo.com/m/${mapId}`;
-  const res = await request.get(url);
-
+async function fetchHtml (mapId) {
   try {
-    return parseJson(res.text);
+    const url = `https://caltopo.com/m/${mapId}`;
+    const res = await request.get(url);
+    if (res.text.length < 1000) throw Error;
+    return res.text;
   } catch (e) {
     throw Error(`Unable to get JSON for CalTopo map "${mapId}".`);
   }
 }
 
-export function parseJson (html) {
-  const match = /org\.sarsoft\.preload = (.+);/.exec(html);
-  if (!match) throw Error('Unable to parse JSON.');
+function parseMetaData (html) {
+  const match = /sarsoft=(.+)$/m.exec(html);
+  if (!match) throw Error('Unable to parse meta data JSON.');
   return JSON.parse(match[1]);
 }
+
+function parseMapData (html) {
+  const match = /org\.sarsoft\.preload = (.+);$/m.exec(html);
+  if (!match) throw Error('Unable to parse map data JSON.');
+  return JSON.parse(match[1]);
+}
+
+Object.assign(getJson, {
+  getJson,
+  parseMetaData,
+  parseMapData
+});
+
+module.exports = getJson;
